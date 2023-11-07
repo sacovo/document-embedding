@@ -9,6 +9,7 @@ dependencies = [
   "mcerp",
   "nltk",
 ]
+readme = "README.md"
 
 [build-system]
 requires = ['setuptools>=36.6.0', 'wheel']
