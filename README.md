@@ -13,12 +13,13 @@ Based on the results of: https://arxiv.org/abs/2304.14796
 Wrapper for Sentence-Embedding, which is used to provide embedding functionality
 
 ```python
-sentence_model = SentenceEmbedding("...")
 
-document_model = AverageDocumentEmbedder(sentence_model)
-document_model = PERTDocumentEmbedder(sentence_model)
+from sentence_transformers import SentenceTransformer
 
-document_model = DocumentEmbedder(sentence_model)
+sentence_model = SentenceTransformer("paraphrase-multilingual-MiniLM-L12-v2")
+
+document_model = AverageDocumentEmbedding(sentence_model, language='german')
+
 
 doc1 = "Arbitrary text"
 doc2 = "..."
